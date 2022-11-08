@@ -1,5 +1,8 @@
 <?php
 
+    /* ---É obrigatorio que o arquivo config.php exista--- */
+    require 'config.php';
+
     /* ---Buscado o arquivo que esta em outro local--- */
     include 'Artigo.php';
 
