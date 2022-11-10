@@ -1,23 +1,24 @@
-<?php
+<!DOCTYPE html>
+<html lang="pt-br">
 
-    class Artigo
-    {
-        private $mysql;
+<head>
+    <title>Meu Blog</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 
-        public function __construct(mysqli $mysql)
-        {
-            $this->mysql = $mysql;
-            
-        }
+<body>
+    <div id="container">
+        <h1>
+            Titulo
+        </h1>
+        <p>
+            conteudo
+        </p>
+        <div>
+            <a class="botao botao-block" href="index.php">Voltar</a>
+        </div>
+    </div>
+</body>
 
-        public function exibirTodos(): array
-        {
-            /* --query: consulta no banco-- */
-            $resultado = $this->mysql->query('SELECT conteudo, id, titulo FROM artigos');
-
-            /* --MYSQLI_ASSOC: para retornar um array associativo-- */
-            $artigos = $resultado->fetch_all(MYSQLI_ASSOC);
-
-            return $artigos;
-        }
-    }    
+</html>
