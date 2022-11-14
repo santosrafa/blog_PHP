@@ -1,3 +1,15 @@
+<?php
+
+    /* --Estao os dados de conexao com o banco-- */
+    require 'config.php';
+
+    require 'src/Artigo.php';
+
+    $obj_artigo = new Artigo($mysql);
+    $artigo = $obj_artigo->econtrarPorId($_GET['id']);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,10 +22,10 @@
 <body>
     <div id="container">
         <h1>
-            Titulo
+            <?php echo $artigo['titulo']; ?>
         </h1>
         <p>
-            conteudo
+        <?php echo $artigo['conteudo']; ?>
         </p>
         <div>
             <a class="botao botao-block" href="index.php">Voltar</a>
