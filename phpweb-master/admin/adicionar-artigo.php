@@ -8,7 +8,7 @@ if ($_SERVER ['REQUEST_METHOD'] === 'POST'){
     $artigp->adicionar($_POST['titulo'], $_POST['conteudo']);
 
     /* --Redirecionando POST REDIRECT GET-- */
-    header('Location: adicionar-artigo.php');
+    header('Location: /blog/phpweb-master/admin/index.php');
     die();
 }
 
