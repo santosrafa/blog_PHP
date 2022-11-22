@@ -2,14 +2,14 @@
 
 require '../config.php';
 require '../src/Artigo.php';
+require '../src/redireciona.php';
 
 if ($_SERVER ['REQUEST_METHOD'] === 'POST'){
     $artigp = new Artigo($mysql);
     $artigp->adicionar($_POST['titulo'], $_POST['conteudo']);
 
-    /* --Redirecionando POST REDIRECT GET-- */
-    header('Location: /blog/phpweb-master/admin/index.php');
-    die();
+    /* --Funcao redireciona pagina-- */
+    redireciona('/blog/phpweb-master/admin/index.php');
 }
 
 ?>
