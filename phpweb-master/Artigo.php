@@ -12,7 +12,6 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <title>Meu Blog</title>
     <meta charset="UTF-8">
@@ -25,7 +24,7 @@
             <?php echo $artigo['titulo']; ?>
         </h1>
         <p>
-        <?php echo $artigo['conteudo']; ?>
+        <?php echo nl2br($artigo['conteudo']); ?>
         </p>
         <div>
             <a class="botao botao-block" href="index.php">Voltar</a>

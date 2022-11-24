@@ -30,7 +30,8 @@
                 </a>
             </h2>
             <p>
-                <?php echo $artigo['conteudo']; ?>
+                <!-- --nl2br utilizado para quebra de linha-- -->
+                <?php echo nl2br($artigo['conteudo']); ?>
             </p>
         <?php endforeach; ?>
     </div>
